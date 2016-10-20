@@ -107,5 +107,6 @@ def test_using_wrong_interface(defaults, interface, method):
 
 	result = run(loop, thread_func)
 
-	assert result.value.message == "'{}' object has no attribute '{}'".format(interface, method)
+	assert str(result.value) == "'{}' object has no attribute '{}'".format(
+		interface, method)
 	assert obj.done == []

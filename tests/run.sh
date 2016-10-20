@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+cd "$(dirname "$(dirname "$0")")"
+
 ADDRESS_FILE=$(mktemp /tmp/pydbustest.XXXXXXXXX)
 PID_FILE=$(mktemp /tmp/pydbustest.XXXXXXXXX)
 
